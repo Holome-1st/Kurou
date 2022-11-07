@@ -5,11 +5,11 @@ const fs = require('fs');
 function activate(context) {
 	console.log("Chiya theme is active !");
 
-	let refreshCommand = vscode.commands.registerCommand('chiya-theme.refreshTheme', () => {
+	/*let refreshCommand = vscode.commands.registerCommand('chiya-theme.refreshTheme', () => {
 		vscode.window.showInformationMessage("The Chiya Theme got refreshed !");
 	});
 
-	context.subscriptions.push(refreshCommand);
+	context.subscriptions.push(refreshCommand);*/
 }
 
 function deactivate() {

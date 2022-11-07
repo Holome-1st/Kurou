@@ -1,9 +1,10 @@
 {
   "name": "chiya-theme",
   "displayName": "Chiya Theme",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "VSCode theme (Colors & Background Image)",
   "author": "Holome <holomeyt@gmail.com>",
+  "icon": "icon-512x512.png",
   "categories": [
     "Themes",
     "Other"
@@ -29,6 +30,13 @@
     "onCommand:chiya-theme.refreshTheme"
   ],
   "contributes": {
+    "themes": [
+      {
+        "label": "Black Fox",
+        "uiTheme": "vs-dark",
+        "path": "./themes/color-theme.json"
+      }
+    ],
     "commands": [{
       "command": "chiya-theme.refreshTheme",
       "title": "Refresh the Chiya theme."
