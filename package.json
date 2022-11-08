@@ -1,59 +1,66 @@
 {
-  "name": "chiya-theme",
-  "displayName": "Chiya Theme",
-  "version": "1.0.0",
-  "description": "VSCode theme (Colors & Background Image)",
-  "author": "Holome <holomeyt@gmail.com>",
-  "icon": "icon-512x512.png",
-  "categories": [
-    "Themes",
-    "Other"
-  ],
-  "keywords": [
-    "chiya",
-    "theme",
-    "background",
-    "image",
-    "dark"
-  ],
-  "license": "UNLICENSED",
-  "private": true,
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/HolomeFR/chiya-theme/"
-  },
-  "main": "./extension.js",
-  "scripts": {
-    "package": "vsce package"
-  },
-  "activationEvents": [
-    "onCommand:chiya-theme.refreshTheme"
-  ],
-  "contributes": {
-    "themes": [
-      {
-        "label": "Black Fox",
-        "uiTheme": "vs-dark",
-        "path": "./themes/color-theme.json"
-      }
+    "name": "chiya-theme",
+    "displayName": "Chiya Theme",
+    "version": "1.0.0",
+    "description": "VSCode theme (Colors & Background Image)",
+    "author": "Holome <holomeyt@gmail.com>",
+    "icon": "icon-512x512.png",
+    "categories": [
+        "Themes",
+        "Other"
     ],
-    "commands": [{
-      "command": "chiya-theme.refreshTheme",
-      "title": "Refresh the Chiya theme."
-    }]
-  },
-  "devDependencies": {
-    "@types/vscode": "^1.73.0",
-    "@types/glob": "^8.0.0",
-    "@types/mocha": "^10.0.0",
-    "@types/node": "16.x",
-    "eslint": "^8.26.0",
-    "glob": "^8.0.3",
-    "mocha": "^10.1.0",
-    "typescript": "^4.8.4",
-    "@vscode/test-electron": "^2.2.0"
-  },
-  "engines": {
-    "vscode": "^1.73.0"
-  }
+    "keywords": [
+        "chiya",
+        "theme",
+        "background",
+        "image",
+        "dark"
+    ],
+    "license": "UNLICENSED",
+    "private": true,
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/HolomeFR/chiya-theme/"
+    },
+    "main": "./extension.js",
+    "scripts": {
+        "package": "vsce package"
+    },
+    "activationEvents": [
+        "onCommand:chiya-theme.displayBackgroundImage",
+        "onCommand:chiya-theme.hideBackgroundImage"
+    ],
+    "contributes": {
+        "themes": [
+            {
+                "label": "Black Fox",
+                "uiTheme": "vs-dark",
+                "path": "./themes/color-theme.json"
+            }
+        ],
+        "commands": [
+            {
+                "command": "chiya-theme.displayBackgroundImage",
+                "title": "Display the background image"
+            },
+            {
+                "command": "chiya-theme.hideBackgroundImage",
+                "title": "Hide the background image"
+            }
+        ]
+    },
+    "devDependencies": {
+        "@types/vscode": "^1.73.0",
+        "@types/glob": "^8.0.0",
+        "@types/mocha": "^10.0.0",
+        "@types/node": "16.x",
+        "eslint": "^8.26.0",
+        "glob": "^8.0.3",
+        "mocha": "^10.1.0",
+        "typescript": "^4.8.4",
+        "@vscode/test-electron": "^2.2.0"
+    },
+    "engines": {
+        "vscode": "^1.73.0"
+    }
 }
