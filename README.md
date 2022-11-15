@@ -4,23 +4,23 @@
 ## Background image
 ```
 To display the background image, you have to :<br/>
-&emsp;• Press F1<br/>
-&emsp;• Writes : Display the background image<br/>
-&emsp;• Press Enter<br/>
+    • Press F1<br/>
+    • Writes : Display the background image<br/>
+    • Press Enter<br/>
 ```
 ```
 To hide the background image, you have to :<br/>
-&emsp;• Press F1<br/>
-&emsp;• Writes : Hide the background image<br/>
-&emsp;• Press Enter<br/>
+    • Press F1<br/>
+    • Writes : Hide the background image<br/>
+    • Press Enter<br/>
 ```
 ```
 To change the background image, you have to :<br/>
-&emsp;• Open your File Explorer<br/>
-&emsp;• Go to this location : C:\Users\[USER_NAME]\.vscode\extensions\chiya-theme-X.X.X\themes\custom-background-image.css<br/>
-&emsp;• Replace the URL (in "custom-background-image") to another image convert to Base64<br/>
-&emsp;• Save the file<br/>
-&emsp;• Reload VSCode<br/>
+    • Open your File Explorer<br/>
+    • Go to this location : C:\Users\[USER_NAME]\.vscode\extensions\chiya-theme-X.X.X\themes\custom-background-image.css<br/>
+    • Replace the URL (in "custom-background-image") to another image convert to Base64<br/>
+    • Save the file<br/>
+    • Reload VSCode<br/>
 ```
 
 ## Sources
