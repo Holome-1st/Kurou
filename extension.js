@@ -19,14 +19,13 @@ function activate(context) {
 	/* ---------------------------- */
 	const displayBackgroundImage = vscode.commands.registerCommand('chiya-theme.displayBackgroundImage', () => {
 		// Checks if there is a custom background image
-		if(fs.existsSync(`${paths.vscode.root}\\${paths.vscode.wrb}\\chiya-detector`)) {
+		const data = fs.readFileSync(`${paths.extension.root}\\${paths.extension.cbi}`, { encoding: "utf-8", flag: "r" });
+		if (fs.readFileSync(`${paths.vscode.root}\\${paths.vscode.wrb}\\${paths.vscode.wdm}`, { encoding: "utf-8", flag: "r" }).endsWith(data)) {
 			// Send Message
 			vscode.window.showWarningMessage("Custom background image already exists !");
 		} else {
 			// Edit VSCode CSS & Create a detector file
-			const data = fs.readFileSync(`${paths.extension.root}\\${paths.extension.cbi}`, { encoding: "utf-8", flag: "r" });
 			fs.writeFileSync(`${paths.vscode.root}\\${paths.vscode.wrb}\\${paths.vscode.wdm}`, data, { encoding: "utf-8", flag: "a" });
-			fs.openSync(`${paths.vscode.root}\\${paths.vscode.wrb}\\chiya-detector`, "w");
 
 			// Reload VSCode
 			vscode.commands.executeCommand("workbench.action.reloadWindow");
@@ -39,17 +38,16 @@ function activate(context) {
 
 
 
-	/* -------------------------- */
+	/* -------------------------- */	
 	/*  Hide the background image */
 	/* -------------------------- */
 	const hideBackgroundImage = vscode.commands.registerCommand('chiya-theme.hideBackgroundImage', () => {
 		// Checks if there is a custom background image
-		if(fs.existsSync(`${paths.vscode.root}\\${paths.vscode.wrb}\\chiya-detector`)) {
+		const dataLength = fs.readFileSync(`${paths.extension.root}\\${paths.extension.cbi}`, { encoding: "utf-8", flag: "r" }).length;
+		const data = fs.readFileSync(`${paths.vscode.root}\\${paths.vscode.wrb}\\${paths.vscode.wdm}`, { encoding: "utf-8", flag: "r" });
+		if (fs.readFileSync(`${paths.vscode.root}\\${paths.vscode.wrb}\\${paths.vscode.wdm}`, { encoding: "utf-8", flag: "r" }).endsWith(data)) {
 			// Edit VSCode CSS & Remove the detector file
-			const dataLength = fs.readFileSync(`${paths.extension.root}\\${paths.extension.cbi}`, { encoding: "utf-8", flag: "r" }).length;
-			const data = fs.readFileSync(`${paths.vscode.root}\\${paths.vscode.wrb}\\${paths.vscode.wdm}`, { encoding: "utf-8", flag: "r" });
 			fs.writeFileSync(`${paths.vscode.root}\\${paths.vscode.wrb}\\${paths.vscode.wdm}`, data.slice(0, -dataLength), { encoding: "utf-8"});
-			fs.unlinkSync(`${paths.vscode.root}\\${paths.vscode.wrb}\\chiya-detector`);
 
 			// Reload VSCode
 			vscode.commands.executeCommand("workbench.action.reloadWindow");
