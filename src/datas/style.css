@@ -1,0 +1,15 @@
+/* Kurou CSS Style Data */
+.editor-group-container.empty, .monaco-editor.no-user-select.showUnused.showDeprecated.vs-dark {
+    background-image: url("") !important;
+    background-position: bottom left !important;
+    background-attachment: fixed !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    opacity: 1 !important;
+}
+.suggest-input-container .monaco-editor.no-user-select.showUnused.showDeprecated.vs-dark, .settings-editor .monaco-editor.no-user-select.showUnused.showDeprecated.vs-dark, .lines-content.monaco-editor-background, .margin {
+    background-image: none !important;
+}
+.watermark {
+    z-index: 1 !important;
+}

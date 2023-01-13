@@ -1,52 +1,64 @@
 {
-    "name": "chiya-theme",
-    "displayName": "Chiya Theme",
+    "name": "kurou",
+    "displayName": "Kurou",
     "version": "2.1.1",
-    "description": "VSCode theme (Colors & Background Image)",
+    "description": "Kurou is a VSCode theme that brings together a elegant theme and pretty custom background image.",
     "author": "Holome <holomeyt@gmail.com>",
     "publisher": "Holome",
-    "icon": "images/logo.png",
+    "icon": "src/images/extension_icon.jpg",
     "categories": [
         "Themes",
         "Other"
     ],
     "keywords": [
-        "chiya",
-        "theme",
-        "background",
-        "image",
-        "dark"
+        "Holome",
+        "Kurou",
+        "Themes",
+        "Background"
     ],
-    "license": "UNLICENSED",
+    "license": "UNLICENSE",
     "private": true,
     "repository": {
         "type": "git",
-        "url": "https://github.com/HolomeFR/chiya-theme/"
+        "url": "https://github.com/HolomeFR/Kurou/"
     },
-    "main": "./extension.js",
+    "main": "./main.js",
     "scripts": {
         "package": "vsce package"
     },
     "activationEvents": [
-        "onCommand:chiya-theme.displayBackgroundImage",
-        "onCommand:chiya-theme.hideBackgroundImage"
+        "onStartupFinished",
+        "onCommand:kurou.change-background-image",
+        "onCommand:kurou.remove-background-image"
     ],
     "contributes": {
-        "themes": [
-            {
-                "label": "Black Fox",
-                "uiTheme": "vs-dark",
-                "path": "./themes/color-theme.json"
-            }
-        ],
         "commands": [
             {
-                "command": "chiya-theme.displayBackgroundImage",
-                "title": "Display the background image"
+                "command": "kurou.change-background-image",
+                "title": "Change Background Image",
+                "category": "Kurou"
             },
             {
-                "command": "chiya-theme.hideBackgroundImage",
-                "title": "Hide the background image"
+                "command": "kurou.remove-background-image",
+                "title": "Remove Background Image",
+                "category": "Kurou"
+            }
+        ],
+        "themes": [
+            {
+                "label": "Kurou • Red",
+                "uiTheme": "vs-dark",
+                "path": "./src/themes/red.json"
+            },
+            {
+                "label": "Kurou • Green",
+                "uiTheme": "vs-dark",
+                "path": "./src/themes/green.json"
+            },
+            {
+                "label": "Kurou • Blue",
+                "uiTheme": "vs-dark",
+                "path": "./src/themes/blue.json"
             }
         ]
     },
