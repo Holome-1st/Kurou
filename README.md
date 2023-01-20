@@ -10,17 +10,17 @@ You will also find **a feature of custom background image**.
 **It will be disabled first** when you install the extension, but **you can enable it** easily by following some steps described below.
 
 - Right here all the steps u have to follow to **enable your background image**.
-	1 - Press the F1 key on your keyboard.
-	2 - Write : "Kurou: Change Background Image"
-	3 - Press the Enter key on your keyboard.
-	4 - Add a direct link to your image (starting with : HTTP or HTTPS, and end with : JPEG or JPG or PNG.
-	5 - If nothing changed, please reload VSCode (a cache problem may have occurred).
+	1. Press the F1 key on your keyboard.
+	2. Write : "Kurou: Change Background Image"
+	3. Press the Enter key on your keyboard.
+	4. Add a direct link to your image (starting with : HTTP or HTTPS, and end with : JPEG or JPG or PNG.
+	5. If nothing changed, please reload VSCode (a cache problem may have occurred).
 
 - Right here all the steps u have to follow to **remove a ugly background image**.
-	1 - Press the F1 key on your keyboard.
-	2 - Write : "Kurou: Remove Background Image"
-	3 - Press the Enter key on your keyboard.
-	4 - If nothing changed, please reload VSCode (a cache problem may have occurred).
+	1. Press the F1 key on your keyboard.
+	2. Write : "Kurou: Remove Background Image"
+	3. Press the Enter key on your keyboard.
+	4. If nothing changed, please reload VSCode (a cache problem may have occurred).
 
 *If your image is installed on your pc and you do not have a web link to it, I recommend this very good free image host : [Postimages](https://postimages.org).*
 
