@@ -1,7 +1,7 @@
 ### Colors Theme
 ---
-You will find, in this extension, **3 color themes** : Red, Green and Blue.__
-All theme colors are **dark mode** and **no light mode** is currently available.__
+You will find, in this extension, **3 color themes** : Red, Green and Blue.
+All theme colors are **dark mode** and **no light mode** is currently available.
 *By the way, if you're using light mode, you should really go to therapy.*
 
 ### Background image
