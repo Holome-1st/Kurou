@@ -1,8 +1,8 @@
 {
     "name": "kurou",
     "displayName": "Kurou",
-    "version": "2.1.1",
-    "description": "Kurou is a VSCode theme that brings together a elegant theme and pretty custom background image.",
+    "version": "2.1.2",
+    "description": "Kurou is a VSCode themes extension, including colors themes and a customizable background image.",
     "author": "Holome <holomeyt@gmail.com>",
     "publisher": "Holome",
     "icon": "src/images/extension_icon.jpg",
