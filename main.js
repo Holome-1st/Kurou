@@ -12,6 +12,14 @@ function sendLog(data, lastLine) {
 	if(lastLine) log.appendLine("");
 }
 
+// Throw notification to reload VSCode.
+function promptReload(message) {
+	vscode.window.showInformationMessage(message+" Reload to see the changes.", "Reload").then((value) => {
+		if(value === "Reload") {
+			vscode.commands.executeCommand("workbench.action.reloadWindow");
+		}
+	});
+}
 
 // Execute this function when the extension start.
 function activate(context) {
@@ -85,7 +93,7 @@ function activate(context) {
 			try {
 				fs.writeFileSync(path.join(vscode.env.appRoot, "\\out\\vs\\workbench\\workbench.background.desktop.main.css"), data, { encoding: "utf-8", flag: "w" });
 
-				vscode.window.showInformationMessage("Your wallpaper has been changed, you may need to restart VSCode !");
+				promptReload("Your wallpaper has been changed!");
 				sendLog("─ A file got edited : " + path.join(vscode.env.appRoot, "\\out\\vs\\workbench\\workbench.background.desktop.main.css"), true);
 			} catch(err) {
 				sendLog("┌ An error has occurred ! [Code: E2]", false);
@@ -114,7 +122,7 @@ function activate(context) {
 		try {
 			fs.writeFileSync(path.join(vscode.env.appRoot, "\\out\\vs\\workbench\\workbench.background.desktop.main.css"), data, { encoding: "utf-8", flag: "w" });
 
-			vscode.window.showInformationMessage("Your wallpaper has been removed, you may need to restart VSCode !");
+			promptReload("Your wallpaper has been removed!");
 			sendLog("─ A file got edited : " + path.join(vscode.env.appRoot, "\\out\\vs\\workbench\\workbench.background.desktop.main.css"), true);
 		} catch(err) {
 			sendLog("┌ An error has occurred ! [Code: E2]", false);
