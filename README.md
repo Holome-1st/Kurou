@@ -13,7 +13,7 @@ You will also find **a feature of custom background image**.
 	1. Press the F1 key on your keyboard.
 	2. Write : "Kurou: Change Background Image"
 	3. Press the Enter key on your keyboard.
-	4. Add a direct link to your image (starting with : HTTP or HTTPS, and end with : JPEG or JPG or PNG.
+	4. Add a direct link to your image (starting with : HTTP or HTTPS, and end with : JPEG or JPG or PNG).
 	5. If nothing changed, please reload VSCode (a cache problem may have occurred).
 
 - Right here all the steps u have to follow to **remove a ugly background image**.
